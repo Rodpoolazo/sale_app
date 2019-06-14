@@ -1,0 +1,17 @@
+<h1>Ingresar Ventas</h1>
+
+<%= form_with model: Sale.new do |f|%>
+  <%= f.label :cod, "Codigo de venta" %>
+  <%= f.number_field :cod, min: 0 %>
+  <%= f.label :detail, "Detalle de la venta" %>
+  <%= f.text_area :detail %>
+  <%= f.label :category, "Categoria de la venta" %>
+  <%= f.text_field :category %>
+  <%= f.label :value, "Valor de Venta" %>
+  <%= f.number_field :value, min: 0 %>
+  <%= f.label :discount, "% Descuento" %>
+  <%= f.number_field :value, min: 0 %>
+  <%= f.label :tax, "IVA" %>
+  <%= f.check_box :tax %>
+  <%= f.submit "Ingresar Venta" %>
+<% end %>
